@@ -15,7 +15,7 @@ export default function Symptoms() {
             be more vulnerable to becoming severely ill.
           </p>
         </div>
-        <img className="symptoms-img" src={DoctorImage} alt="Doctor-Image" title="doctor" />
+        <img className="symptoms-img" src={DoctorImage} alt="Doctor" title="doctor" />
       </div>
     </>
   );
