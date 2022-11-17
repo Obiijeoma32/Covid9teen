@@ -1,38 +1,484 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  background: #edeeee;
+}
+.header {
+  display: flex;
+  z-index: 9999;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  background: white;
+  margin-top: -40px;
+  padding-top: 40px;
+}
+.header-title {
+  color: #2b6ff3;
+  /* padding-left: 44px; */
+  margin-top: 14px;
+}
+.header-title > .header-icon {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+}
+.header-icon {
+  padding-top: 12px;
+  margin-left: 30px;
+  display: flex;
+}
+.header-links {
+  display: flex;
+
+  height: 17px;
+  justify-content: space-between;
+}
+.links {
+  text-decoration: none;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 650;
+  font-size: 14px;
+  line-height: 17px;
+  color: black;
+  padding-top: 35px;
+  padding-right: 70px;
+}
+.date-time {
+  display: flex;
+  color: #5f6368;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(196, 196, 196, 0.12);
+  border-radius: 3px;
+  width: 197px;
+  height: 46px;
+  margin-top: 19px;
+  margin-right: 40px;
+  padding-left: 28px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 550;
+  font-size: 14px;
+}
+/* Tracker starts here  */
+.tracker-header {
+  padding-top: 130px;
+  margin-bottom: 20px;
+  margin-left: 44px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 650;
+  font-size: 24px;
+  color: #000000;
+}
+.tracker-box {
+  display: flex;
+  width: 94%;
+  height: 220px;
+  background-color: white;
+  margin-left: 44px;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.box {
+  margin-top: 35px;
+  background: rgba(43, 111, 243, 0.05);
+  width: 265px;
+  height: 120px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -42px;
+  background: rgba(43, 111, 243, 0.05);
+}
+.box-text {
+  margin-top: 10px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box2 {
+  margin-top: 35px;
+  background: rgba(243, 153, 17, 0.05);
+  width: 265px;
+  height: 120px;
+  margin-right: 2px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+}
+.circle2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(243, 153, 17, 0.05);
+  position: absolute;
+  margin-top: -42px;
+}
+.box3 {
+  margin-top: 35px;
+  background: rgba(22, 180, 66, 0.05);
+  width: 265px;
+  height: 120px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.circle3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(22, 180, 66, 0.05);
+  position: absolute;
+  margin-top: -42px;
+}
+.box4 {
+  margin-top: 35px;
+  background: rgba(214, 50, 50, 0.05);
+  width: 265px;
+  height: 120px;
+  margin-right: 25px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.circle4 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(214, 50, 50, 0.05);
+  position: absolute;
+  margin-top: -42px;
+}
+/* countries start here */
+.countries {
+  width: 94%;
+  height: 520px;
+  background-color: #ffffff;
+  margin-left: 44px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.top-countries-container {
+  width: 250px;
+  height: 250px;
+  background: rgba(214, 50, 50, 0.04);
+  border-radius: 50%;
+}
+.top-affected-countries {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+  padding-top: 40px;
+  padding-left: 40px;
+  white-space: nowrap;
+}
+.countries-last-updated {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #777f8d;
+  padding-left: 40px;
+  padding-top: 10px;
+  white-space: nowrap;
+}
+.countries-flag {
+  position: relative;
+  right: 20%;
+  top: 40%;
+  width: 400px;
+  height: 300px;
+  background: transparent;
+  border: 1px solid #f1f4fa;
+  border-radius: 10px;
+}
+.countries-flag-header {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  color: #777f8d;
+  padding-left: 40px;
+}
+.countries-table1 {
+  margin-top: 25px;
+  margin-left: 20px;
+  text-align: left;
+  width: 350px;
 }
 
-.App-link {
-  color: #61dafb;
+.countries-table-td {
+  padding: 10px 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.countries-img {
+  width: 40px;
+  height: 40px;
+  padding-top: 13px;
+  /* padding-right: -10px; */
+}
+.country-name {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  color: #000000;
+}
+.country-number {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 21px;
+  /* position: absolute; */
+  color: #2b6ff3;
+  padding-left: 30%;
+}
+.country-italy {
+  /* background-color: rgba(238, 238, 238, 0.34);
+  border: none; */
+}
+.cases {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+  margin-top: 17.5%;
+  margin-left: -24%;
+  width: 400px;
+}
+.numbers {
+  width: 180px;
+  height: 85px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #f1f4fa;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+.h3 {
+  color: #777f8d;
+  font-size: 15px;
+  font-weight: 450px;
+  padding-top: 15px;
+}
+.symptoms {
+  display: flex;
+}
+.symptoms-content {
+  margin-top: 17%;
+  width: 725px;
+  margin-left: 55px;
+}
+.symptoms-header {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #e81454;
+  width: 197px;
+  height: 39px;
+  background: rgba(232, 20, 84, 0.06);
+  border-radius: 30px;
+  text-align: center;
+  padding-top: 17px;
+}
+.symptoms-details {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 209.6%;
+  color: #5f6368;
+  padding-top: 18px;
+}
+.symptoms-img {
+  margin-top: 69px;
+  margin-left: 15%;
+}
+.prevention {
+  background-color: #ffffff;
+  height: 780px;
+  width: 94%;
+  margin-left: 44px;
+  margin-top: 50px;
+  display: flex;
+}
+.prevention-details {
+  margin-top: 5%;
+  width: 45%;
+  height: auto;
+}
+.prevention-h1 {
+  font-family: "Rubik";
+  font-weight: 700;
+  font-size: 36px;
+  color: #000000;
+}
+.prevention-img {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.img-icon {
+  padding-top: 18px;
+  width: 154px;
+  height: 151px;
+  background: #ffffff;
+  border: 1px solid #f1f4fa;
+  border-radius: 5px;
+  white-space: nowrap;
+  margin: 10px;
+  font-weight: 400;
+  font-size: 11px;
+  color: #000000;
+}
+.prevention-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: auto;
+  text-align: center;
+  align-content: space-between;
+}
+.prevention-note {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 193.6%;
+  color: #5f6368;
+  margin-top: 10px;
+}
+.preventive-measures {
+  font-family: "Rubik";
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 209.6%;
+  color: #000000;
+  padding-top: 20px;
+}
+.text {
+  padding-top: 14px;
+  color: #000000;
+}
+.footer {
+  width: 100%;
+  height: 450px;
+  background: #ffffff;
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-box1 {
+  width: 37%;
+  margin-left: 45px;
+}
+.footer-box2 {
+  width: 23%;
+  margin-top: -15px;
+  background: rgba(43, 111, 243, 0.05);
+  border-radius: 50%;
+  height: 300px;
+  margin-right: 10%;
+}
+.footer-header-icon {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.footer-icon {
+  width: 60px;
+  margin-left: -10px;
+}
+.footer-header {
+  color: #2b6ff3;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+}
+.footer-note {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 193.6%;
+  color: #000000;
+  width: 80%;
+  padding-top: 15px;
+}
+.footer-link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 550;
+  font-size: 14px;
+  cursor: pointer;
+}
+.footer-link:hover {
+  color: #2b6ff3;
+}
+.box2-content {
+  padding-top: 35%;
+  margin-left: 10px;
+  text-align: center;
+  height: auto;
+}
+.footer-title {
+  color: #2b6ff3;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+}
+.footer-box3 {
+  padding-top: 6.5%;
+  margin-right: 30px;
+  white-space: nowrap;
+}
+.box3-details {
+  color: #000000;
+  font-weight: 500;
+  font-size: 14px;
+  padding-top: 10px;
+}
+.footer-box4 {
+  width: 150px;
+  height: 150px;
+  background: rgba(170, 42, 42, 0.05);
+  border-radius: 50%;
+  /* margin-top: -5%;
+  margin-left: -5%; */
+  /* position: fixed; */
+}
+.footer-box5 {
+  margin-right: 41%;
+  text-align: center;
+  margin-top: 5%;
+}
+.footer-atag {
+  margin-right: 12px;
 }
