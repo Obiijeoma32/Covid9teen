@@ -68,11 +68,11 @@ const Countries = () => {
               <div className="box-2-header">{!data.Country ? "Country" : data.Country}</div>
               <div className="box-2-cards">
                 <div className="box-2-card-1">
-                  <h4>Total Cases</h4>
+                  <h4 style={{ marginTop: "15px" }}>Total Cases</h4>
                   <p className="primary-color">{!data.TotalConfirmed ? " 😭 " : <NumericFormat value={`${data.TotalConfirmed}`} displayType={"text"} thousandSeparator={true} />}</p>
                 </div>
                 <div className="box-2-card-2">
-                  <h4>Active Cases</h4>
+                  <h4 style={{ marginTop: "15px" }}>Active Cases</h4>
                   <p className="primary-color">
                     {!(data.TotalConfirmed - (data.TotalDeaths + data.TotalRecovered)) ? " 🧐 " : <NumericFormat value={`${data.TotalConfirmed - (data.TotalDeaths + data.TotalRecovered)}`} displayType={"text"} thousandSeparator={true} />}
                   </p>
@@ -80,21 +80,21 @@ const Countries = () => {
               </div>
               <div className="box-2-cards">
                 <div className="box-2-card-3">
-                  <h4>Recoveries</h4>
+                  <h4 style={{ marginTop: "15px" }}>Recoveries</h4>
                   <p className="primary-color">{!data.TotalRecovered ? " 😷 " : <NumericFormat value={`${data.TotalRecovered}`} displayType={"text"} thousandSeparator={true} />}</p>
                 </div>
                 <div className="box-2-card-4">
-                  <h4>Total Deaths</h4>
+                  <h4 style={{ marginTop: "15px" }}>Total Deaths</h4>
                   <p className="primary-color">{!data.TotalDeaths ? " 👿 " : <NumericFormat value={`${data.TotalDeaths}`} displayType={"text"} thousandSeparator={true} />}</p>
                 </div>
               </div>
               <div className="box-2-cards">
                 <div className="box-2-card-5">
-                  <h4>New Cases</h4>
+                  <h4 style={{ marginTop: "15px" }}>New Cases</h4>
                   <p className="primary-color">{!data.NewConfirmed ? " 😭 " : <NumericFormat value={`${data.NewConfirmed}`} displayType={"text"} thousandSeparator={true} />}</p>
                 </div>
                 <div className="box-2-card-6">
-                  <h4>New Deaths</h4>
+                  <h4 style={{ marginTop: "15px" }}>New Deaths</h4>
                   <p className="primary-color">{!data.NewDeaths ? " 😡 " : <NumericFormat value={`${data.NewDeaths}`} displayType={"text"} thousandSeparator={true} />}</p>
                 </div>
               </div>
